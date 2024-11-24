@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="waves w-100">
+            <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 130" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(148.941, 0, 225.722, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,104L24,104C48,104,96,104,144,91C192,78,240,52,288,54.2C336,56,384,87,432,84.5C480,82,528,48,576,47.7C624,48,672,82,720,86.7C768,91,816,65,864,45.5C912,26,960,13,1008,17.3C1056,22,1104,43,1152,60.7C1200,78,1248,91,1296,80.2C1344,69,1392,35,1440,36.8C1488,39,1536,78,1584,78C1632,78,1680,39,1728,36.8C1776,35,1824,69,1872,80.2C1920,91,1968,78,2016,75.8C2064,74,2112,82,2160,88.8C2208,95,2256,100,2304,91C2352,82,2400,61,2448,54.2C2496,48,2544,56,2592,62.8C2640,69,2688,74,2736,62.8C2784,52,2832,26,2880,19.5C2928,13,2976,26,3024,30.3C3072,35,3120,30,3168,34.7C3216,39,3264,52,3312,65C3360,78,3408,91,3432,97.5L3456,104L3456,130L3432,130C3408,130,3360,130,3312,130C3264,130,3216,130,3168,130C3120,130,3072,130,3024,130C2976,130,2928,130,2880,130C2832,130,2784,130,2736,130C2688,130,2640,130,2592,130C2544,130,2496,130,2448,130C2400,130,2352,130,2304,130C2256,130,2208,130,2160,130C2112,130,2064,130,2016,130C1968,130,1920,130,1872,130C1824,130,1776,130,1728,130C1680,130,1632,130,1584,130C1536,130,1488,130,1440,130C1392,130,1344,130,1296,130C1248,130,1200,130,1152,130C1104,130,1056,130,1008,130C960,130,912,130,864,130C816,130,768,130,720,130C672,130,624,130,576,130C528,130,480,130,432,130C384,130,336,130,288,130C240,130,192,130,144,130C96,130,48,130,24,130L0,130Z"></path></svg>
+        </div>
+        <div class="header-bg ">
+            <div class="container d-flex justify-content-center align-items-center">
+                        <h1 class="text-capitalize text-center floating py-5">bookmarker</h1>
+                    
+            </div>
+            <section class="bookMarker py-4">
+                <div class="container">
+            <label class="siteName py-2 " for="siteName"><i class="fa-solid fa-book-bookmark"></i>Site Name</label>
+            <input type="text" class="form-control " name="" id="siteName">
+        
+        
+            <label class="siteUrl py-2" for="siteUrl"><i class="fa-solid fa-link"></i>Site Url</label>
+            <input type="text" class="form-control " name="" id="siteUrl">
+            
+            <div class="text-center">
+                <button onclick="addBookmark()" class=" btn1  mt-3 ">Submit</button>
+            </div>
+            
+        
+        
+            <table class="table  mt-5 text-center table-bordered">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody class="tableBody" id="tBody">
+                    <!-- <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td> -->
+        
+                </tbody>
+        
+            </table>
+            
+                </div>
+        
+            </section>
+        </div>
+       
+    
+
+
+
+<!-- 
+        <div class="waves w-100">
+            <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 210" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(151.712, 8.763, 205.231, 1)" offset="0%"></stop><stop stop-color="rgba(226.991, 137.578, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,0L60,14C120,28,240,56,360,84C480,112,600,140,720,129.5C840,119,960,70,1080,56C1200,42,1320,63,1440,80.5C1560,98,1680,112,1800,122.5C1920,133,2040,140,2160,147C2280,154,2400,161,2520,161C2640,161,2760,154,2880,136.5C3000,119,3120,91,3240,66.5C3360,42,3480,21,3600,42C3720,63,3840,126,3960,147C4080,168,4200,147,4320,115.5C4440,84,4560,42,4680,31.5C4800,21,4920,42,5040,42C5160,42,5280,21,5400,42C5520,63,5640,126,5760,154C5880,182,6000,175,6120,150.5C6240,126,6360,84,6480,70C6600,56,6720,70,6840,91C6960,112,7080,140,7200,133C7320,126,7440,84,7560,63C7680,42,7800,42,7920,35C8040,28,8160,14,8280,17.5C8400,21,8520,42,8580,52.5L8640,63L8640,210L8580,210C8520,210,8400,210,8280,210C8160,210,8040,210,7920,210C7800,210,7680,210,7560,210C7440,210,7320,210,7200,210C7080,210,6960,210,6840,210C6720,210,6600,210,6480,210C6360,210,6240,210,6120,210C6000,210,5880,210,5760,210C5640,210,5520,210,5400,210C5280,210,5160,210,5040,210C4920,210,4800,210,4680,210C4560,210,4440,210,4320,210C4200,210,4080,210,3960,210C3840,210,3720,210,3600,210C3480,210,3360,210,3240,210C3120,210,3000,210,2880,210C2760,210,2640,210,2520,210C2400,210,2280,210,2160,210C2040,210,1920,210,1800,210C1680,210,1560,210,1440,210C1320,210,1200,210,1080,210C960,210,840,210,720,210C600,210,480,210,360,210C240,210,120,210,60,210L0,210Z"></path></svg>
+        </div> -->
+    </header>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
